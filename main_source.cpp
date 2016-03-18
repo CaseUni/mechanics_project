@@ -4,25 +4,22 @@
 
 using namespace std;
 
-double gateEntry();            //returns the result from formula
-void gatePosition(int);        //will control gate position
+double gateEntry( );            //returns the result from formula
+void gatePosition(double);        //will control gate position
 
 int main( )
 {
-	initwindow(400, 300, "Gate of Forbidden Palace");
 	
 	double value = 0;
-	/*
-	setcolor(YELLOW);
-	rectangle(20,20,100,100);
-	*/
 
-	value = gateEntry();	
+	value = gateEntry();
+	gatePosition( value );
 
 	while (!kbhit( ))
 	{
-		delay(200);
+		delay( 200 );
 	}
+
 	return 0;
 }
 
@@ -34,9 +31,13 @@ double gateEntry()
 	float value = 0; 
 	double formula = 0;
 
+
 	//take value of theeta
 	cout << "\nEnter the Value" << endl;
 	cin >> value;
+
+	if (value == 90)
+		return 0;
 
 	//generates value of : M/|T|
 	formula = ( num1 * cos( value * PI / 180.0 ) ) / ( powf( (0.41 - num2 * sin( value * PI / 180.0 ) ), 0.5 ) );
@@ -45,4 +46,15 @@ double gateEntry()
 
 	return formula;
 	
+}
+
+void gatePosition( double value )
+{
+
+	initwindow(600, 550, "Gate of Forbidden Palace");
+
+	setcolor( YELLOW );
+	line( 50, 150, 50, 450);
+	rectangle( 100, 450, 400, 400);	
+
 }

@@ -1,35 +1,5 @@
-﻿Build started 3/16/2016 10:03:36 PM.
-     1>Project "D:\Case\mechanics_project\bgi.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\project_q2.6.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main_source.cpp
-         main_source.cpp
-     1>d:\case\mechanics_project\main_source.cpp(32): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>d:\case\mechanics_project\main_source.cpp(33): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>d:\case\mechanics_project\main_source.cpp(33): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>d:\case\mechanics_project\main_source.cpp(42): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Case\mechanics_project\Debug\project_q2.6.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\project_q2.6.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Case\mechanics_project\Debug\project_q2.6.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Case\mechanics_project\Debug\project_q2.6.lib" /MACHINE:X86 Debug\bgiout.obj
-         Debug\dibutil.obj
-         Debug\drawing.obj
-         Debug\file.obj
-         Debug\main_source.obj
-         Debug\misc.obj
-         Debug\mouse.obj
-         Debug\palette.obj
-         Debug\text.obj
-         Debug\winbgi.obj
-         Debug\winthread.obj
-         LINK : D:\Case\mechanics_project\Debug\project_q2.6.exe not found or not built by the last incremental link; performing full link
-         bgi.vcxproj -> D:\Case\mechanics_project\Debug\project_q2.6.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Case\mechanics_project\Debug\project_q2.6.exe;#1" /manifest Debug\project_q2.6.exe.intermediate.manifest
-       FinalizeBuildStatus:
-         Deleting file "Debug\project_q2.6.unsuccessfulbuild".
-         Touching "Debug\project_q2.6.lastbuildstate".
-     1>Done Building Project "D:\Case\mechanics_project\bgi.vcxproj" (build target(s)).
+﻿Build started 3/18/2016 10:40:20 AM.
 
 Build succeeded.
 
-Time Elapsed 00:00:04.00
+Time Elapsed 00:00:00.03
