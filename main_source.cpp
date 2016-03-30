@@ -4,16 +4,21 @@
 
 using namespace std;
 
-double gateEntry( );            //returns the result from formula
-void gatePosition(double);        //will control gate position
+double gateEntry( float );            //returns the result from formula
+void gatePosition( double, float );        //will control gate position
 
 int main( )
 {
-	
-	double value = 0;
 
-	value = gateEntry();
-	gatePosition( value );
+	double value = 0;
+	float angle = 0; 
+
+	//take value of theeta
+	cout << "\nEnter the Value" << endl;
+	cin >> angle;
+
+	value = gateEntry( angle );
+	gatePosition( value, angle );
 
 	while (!kbhit( ))
 	{
@@ -23,38 +28,51 @@ int main( )
 	return 0;
 }
 
-double gateEntry() 
+double gateEntry( float angle ) 
 {
 
 	const float PI = 3.14159265; 
 	const float num1 = 0.2, num2 = 0.4;
-	float value = 0; 
 	double formula = 0;
 
-
-	//take value of theeta
-	cout << "\nEnter the Value" << endl;
-	cin >> value;
-
-	if (value == 90)
+	if (angle == 90)
 		return 0;
 
 	//generates value of : M/|T|
-	formula = ( num1 * cos( value * PI / 180.0 ) ) / ( powf( (0.41 - num2 * sin( value * PI / 180.0 ) ), 0.5 ) );
+	formula = ( num1 * cos( angle * PI / 180.0 ) ) / ( powf( (0.41 - num2 * sin( angle * PI / 180.0 ) ), 0.5 ) );
 
 	cout << formula << endl;  //for debugging
 
 	return formula;
-	
+
 }
 
-void gatePosition( double value )
+void gatePosition( double value, float angle )
 {
 
 	initwindow(600, 550, "Gate of Forbidden Palace");
 
+	int x1 = 50, x2 = 450;
+	int y1 = 450, y2 = 450;
+
 	setcolor( YELLOW );
-	line( 50, 150, 50, 450);
-	rectangle( 100, 450, 400, 400);	
+
+	for( y2; y2 >= 150 ; y2-=50, x2-=66.67)
+	{
+
+		setlinestyle(0,0xFFFF,1);
+		line( 50, 150, 50, 450);
+		setlinestyle(1,0xFFFF,3);
+		line( x1, y1, x2, y2);
+		delay( 500 );
+
+		if(y2 != 150)
+		{
+			cleardevice();
+		}
+		else
+			break;
+
+	}
 
 }
