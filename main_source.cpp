@@ -4,20 +4,41 @@
 
 using namespace std;
 
-double gateEntry( float );            //returns the result from formula
-void gatePosition( double, float );        //will control gate position
+double gateEntry( int );            //returns the result from formula
+void gatePosition( double, int );        //will control gate position
 
 int main( )
 {
 
 	double value = 0;
-	float angle = 0; 
+	int angle = 0; 
 
 	//take value of theeta
 	cout << "\nEnter the Value" << endl;
 	cin >> angle;
 
 	value = gateEntry( angle );
+	if(angle>0&&angle<=10)
+		{
+			angle=10;
+	    }
+	if(angle>=11&&angle<=30)
+		{
+			angle=30;
+	    }
+	if(angle>=31&&angle<=50)
+		{
+			angle=50;
+	    }
+	if(angle>=51&&angle<=70)
+		{
+			angle=70;
+	    }
+	if(angle>=71&&angle<=89)
+		{
+			angle=85;
+	    }
+
 	gatePosition( value, angle );
 
 	while (!kbhit( ))
@@ -28,7 +49,7 @@ int main( )
 	return 0;
 }
 
-double gateEntry( float angle ) 
+double gateEntry( int angle ) 
 {
 
 	const float PI = 3.14159265; 
@@ -47,32 +68,84 @@ double gateEntry( float angle )
 
 }
 
-void gatePosition( double value, float angle )
+void gatePosition( double value, int angle )
 {
 
 	initwindow(600, 550, "Gate of Forbidden Palace");
 
-	int x1 = 50, x2 = 450;
-	int y1 = 450, y2 = 450;
+	setcolor( WHITE );
+	
 
-	setcolor( YELLOW );
-
-	for( y2; y2 >= 150 ; y2-=50, x2-=66.67)
+	switch(angle)
 	{
+		
 
-		setlinestyle(0,0xFFFF,1);
-		line( 50, 150, 50, 450);
-		setlinestyle(1,0xFFFF,3);
-		line( x1, y1, x2, y2);
-		delay( 500 );
-
-		if(y2 != 150)
+	case 10:
 		{
-			cleardevice();
-		}
-		else
-			break;
 
+		outtextxy(350,450,"angle 10");
+		getch();
+		exit(0);
+		}// case 1 ends
+		
+		
+		
+	case 30:
+		{
+			outtextxy(450,350,"angle 30");
+			getch();	
+			exit(0);
+		
+		
+		}// case 2 ends
+		
+	
+	case 50:
+		{
+			outtextxy(250,350,"angle 50");
+		getch();
+			exit(0);
+		}// case 3 ends
+		
+	
+	case 70:
+		{
+			outtextxy(250,350,"angle 70");
+			getch();
+			exit(0);
+		
+		}// case 4 ends
+	
+	case 85:
+		{
+			outtextxy(250,350,"angle 85");
+			getch();
+			exit(0);
+		
+		}// case 5 ends
+		
+		
+		
+
+	
+	case 90:
+		{
+		
+		
+		
+		
+		}
+	
+	
 	}
 
-}
+
+
+
+	
+	} // switch ends
+	
+	
+	
+
+
