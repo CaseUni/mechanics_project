@@ -83,7 +83,16 @@ void gatePosition( double value, int angle )
 	case 10:
 		{
 
+		setcolor( YELLOW );
+
+		line(140 ,150 , 140, 350 );//y
+
+		//line(140, 350, 350, 350 ); //x
+
+		line(140, 350, 350, 330); //angle
+
 		outtextxy(350,450,"angle 10");
+
 		getch();
 		exit(0);
 		}// case 1 ends
@@ -92,6 +101,14 @@ void gatePosition( double value, int angle )
 		
 	case 30:
 		{
+			setcolor( YELLOW );
+
+			line(140 ,150 , 140, 350 );//y
+
+			//line(140, 350, 350, 350 ); //x
+	
+			line(140, 350, 350, 300); //angle
+
 			outtextxy(450,350,"angle 30");
 			getch();	
 			exit(0);
@@ -102,14 +119,31 @@ void gatePosition( double value, int angle )
 	
 	case 50:
 		{
+			setcolor( YELLOW );
+
+			line(140 ,150 , 140, 350 );//y
+
+			//line(140, 350, 350, 350 ); //x
+	
+			line(140, 350, 300, 200); //angle
+			
 			outtextxy(250,350,"angle 50");
-		getch();
+
+			getch();
 			exit(0);
 		}// case 3 ends
 		
 	
 	case 70:
 		{
+			setcolor( YELLOW );
+
+			line(140 ,150 , 140, 350 );//y
+
+			//line(140, 350, 350, 350 ); //x
+	
+			line(140, 350, 300, 200); //angle
+			
 			outtextxy(250,350,"angle 70");
 			getch();
 			exit(0);
@@ -118,6 +152,14 @@ void gatePosition( double value, int angle )
 	
 	case 85:
 		{
+			setcolor( YELLOW );
+
+			line(140 ,150 , 140, 350 );//y
+
+			//line(140, 350, 350, 350 ); //x
+	
+			line(140, 350, 150, 150); //angle
+			
 			outtextxy(250,350,"angle 85");
 			getch();
 			exit(0);
@@ -138,7 +180,7 @@ void gatePosition( double value, int angle )
 	
 	
 	}
-
+		
 
 
 
@@ -146,6 +188,6 @@ void gatePosition( double value, int angle )
 	} // switch ends
 	
 	
-	
+		
 
 
