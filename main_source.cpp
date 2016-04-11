@@ -19,25 +19,25 @@ int main( )
 
 	value = gateEntry( angle );
 	if(angle>0&&angle<=10)
-		{
-			angle=10;
-	    }
+	{
+		angle=10;
+	}
 	if(angle>=11&&angle<=30)
-		{
-			angle=30;
-	    }
+	{
+		angle=30;
+	}
 	if(angle>=31&&angle<=50)
-		{
-			angle=50;
-	    }
+	{
+		angle=50;
+	}
 	if(angle>=51&&angle<=70)
-		{
-			angle=70;
-	    }
+	{
+		angle=70;
+	}
 	if(angle>=71&&angle<=89)
-		{
-			angle=85;
-	    }
+	{
+		angle=85;
+	}
 
 	gatePosition( value, angle );
 
@@ -74,120 +74,109 @@ void gatePosition( double value, int angle )
 	initwindow(600, 550, "Gate of Forbidden Palace");
 
 	setcolor( WHITE );
-	
+
 
 	switch(angle)
 	{
-		
+
 
 	case 10:
 		{
 
-		setcolor( YELLOW );
+			setcolor( YELLOW );
+			setlinestyle(0,0,5);
+			line(140 ,150 , 140, 350 );//y
 
-		line(140 ,150 , 140, 350 );//y
+			//line(140, 350, 350, 350 ); //x
 
-		//line(140, 350, 350, 350 ); //x
+			line(140, 350, 350, 330); //angle
+			outtextxy(350,450,"angle 10");
 
-		line(140, 350, 350, 330); //angle
-
-		outtextxy(350,450,"angle 10");
-
-		getch();
-		exit(0);
+			getch();
+			exit(0);
 		}// case 1 ends
-		
-		
-		
+
+
+
 	case 30:
 		{
 			setcolor( YELLOW );
-
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
-	
-			line(140, 350, 350, 300); //angle
 
+			line(140, 350, 350, 300); //angle
 			outtextxy(450,350,"angle 30");
 			getch();	
 			exit(0);
-		
-		
+
+
 		}// case 2 ends
-		
-	
+
+
 	case 50:
 		{
 			setcolor( YELLOW );
-
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
-	
+
 			line(140, 350, 300, 200); //angle
-			
 			outtextxy(250,350,"angle 50");
 
 			getch();
 			exit(0);
 		}// case 3 ends
-		
-	
+
+
 	case 70:
 		{
 			setcolor( YELLOW );
-
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
-	
+
 			line(140, 350, 300, 200); //angle
-			
 			outtextxy(250,350,"angle 70");
 			getch();
 			exit(0);
-		
+
 		}// case 4 ends
-	
+
 	case 85:
 		{
 			setcolor( YELLOW );
-
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
-	
+
 			line(140, 350, 150, 150); //angle
-			
 			outtextxy(250,350,"angle 85");
+
 			getch();
 			exit(0);
-		
-		}// case 5 ends
-		
-		
-		
 
-	
+		}// case 5 ends
+
 	case 90:
 		{
-		
-		
-		
-		
+
+			setcolor( YELLOW );
+			setlinestyle(0,0,5);
+			line(140 ,150 , 140, 350 );//y
+
+			//line(140, 350, 350, 350 ); //x
+
+			setcolor( RED );
+			setlinestyle(0,0,4);
+			line(140 ,150 , 140, 350); //angle
+			outtextxy(250,350,"angle 90");
+
+			getch();
+			exit(0);
+
 		}
-	
-	
+
 	}
-		
 
-
-
-	
-	} // switch ends
-	
-	
-		
-
-
+} // switch ends
