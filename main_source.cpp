@@ -84,11 +84,16 @@ void gatePosition( double value, int angle )
 		{
 
 			setcolor( YELLOW );
-			setlinestyle(0,0,5);
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
 
+			setcolor( BLUE );
+			line(140, 150, 350, 330); //tension line
+			line(130, 150, 140, 150);
+
+			setcolor( YELLOW );
+			line(140, 350, 350, 330);
 			line(140, 350, 350, 330); //angle
 			outtextxy(350,450,"angle 10");
 
@@ -105,6 +110,11 @@ void gatePosition( double value, int angle )
 
 			//line(140, 350, 350, 350 ); //x
 
+			setcolor( BLUE );
+			line(140, 150, 350, 300); //tension line
+			line(100, 150, 140, 150);
+
+			setcolor( YELLOW );
 			line(140, 350, 350, 300); //angle
 			outtextxy(450,350,"angle 30");
 			getch();	
@@ -120,7 +130,11 @@ void gatePosition( double value, int angle )
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
+			setcolor( BLUE );
+			line(140, 150, 297, 200); //tension line
+			line(50, 150, 140, 150);
 
+			setcolor( YELLOW );
 			line(140, 350, 300, 200); //angle
 			outtextxy(250,350,"angle 50");
 
@@ -135,7 +149,11 @@ void gatePosition( double value, int angle )
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
+			setcolor( BLUE );
+			line(140, 150, 297, 200); //tension line
+			line(50, 150, 140, 150);
 
+			setcolor( YELLOW );
 			line(140, 350, 300, 200); //angle
 			outtextxy(250,350,"angle 70");
 			getch();
@@ -150,6 +168,11 @@ void gatePosition( double value, int angle )
 
 			//line(140, 350, 350, 350 ); //x
 
+			setcolor( BLUE );
+			line(140, 150, 150, 150); //tension line
+			line(20, 150, 140, 150);
+
+			setcolor( YELLOW );
 			line(140, 350, 150, 150); //angle
 			outtextxy(250,350,"angle 85");
 
@@ -166,6 +189,8 @@ void gatePosition( double value, int angle )
 			line(140 ,150 , 140, 350 );//y
 
 			//line(140, 350, 350, 350 ); //x
+			setcolor( BLUE );
+			line(0, 150, 140, 150); //tension line
 
 			setcolor( RED );
 			setlinestyle(0,0,4);
